@@ -1,0 +1,6 @@
+framework module Pods_PwitterUITests {
+  umbrella header "Pods-PwitterUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

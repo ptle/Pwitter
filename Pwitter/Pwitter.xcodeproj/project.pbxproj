@@ -1,0 +1,780 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		433700571E5685D9006F8437 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433700561E5685D9006F8437 /* TweetTableViewCell.swift */; };
+		4337005A1E58CCA1006F8437 /* InfiniteScrollActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433700591E58CCA1006F8437 /* InfiniteScrollActivityView.swift */; };
+		435578EF1E51729F009B3B42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435578EE1E51729F009B3B42 /* AppDelegate.swift */; };
+		435578F41E51729F009B3B42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 435578F21E51729F009B3B42 /* Main.storyboard */; };
+		435578F61E51729F009B3B42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 435578F51E51729F009B3B42 /* Assets.xcassets */; };
+		435578F91E51729F009B3B42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 435578F71E51729F009B3B42 /* LaunchScreen.storyboard */; };
+		435579041E51729F009B3B42 /* PwitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435579031E51729F009B3B42 /* PwitterTests.swift */; };
+		4355790F1E51729F009B3B42 /* PwitterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355790E1E51729F009B3B42 /* PwitterUITests.swift */; };
+		4355791E1E5174EE009B3B42 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355791D1E5174EE009B3B42 /* LoginViewController.swift */; };
+		435579221E539EB3009B3B42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435579211E539EB3009B3B42 /* User.swift */; };
+		435579241E539EBC009B3B42 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435579231E539EBC009B3B42 /* Tweet.swift */; };
+		435579261E53AA9E009B3B42 /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435579251E53AA9E009B3B42 /* TwitterClient.swift */; };
+		435579281E53F17B009B3B42 /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435579271E53F17B009B3B42 /* TweetsViewController.swift */; };
+		73BE81917755A1D3FD987EBE /* Pods_PwitterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC87ACA86B0F6C8097F5511 /* Pods_PwitterUITests.framework */; };
+		9E98FDC426B138A8BAF90B96 /* Pods_PwitterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6342D88BA6C8F933A3FECA82 /* Pods_PwitterTests.framework */; };
+		E2BF0B9D7F56F4883CDCE48D /* Pods_Pwitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A7ECE1C615730E827CDFF3 /* Pods_Pwitter.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		435579001E51729F009B3B42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 435578E31E51729F009B3B42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 435578EA1E51729F009B3B42;
+			remoteInfo = Pwitter;
+		};
+		4355790B1E51729F009B3B42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 435578E31E51729F009B3B42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 435578EA1E51729F009B3B42;
+			remoteInfo = Pwitter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2CC87ACA86B0F6C8097F5511 /* Pods_PwitterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PwitterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		396E4B515091B89496534E14 /* Pods-PwitterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PwitterUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PwitterUITests/Pods-PwitterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3B6D7C618A2067DB92675B40 /* Pods-Pwitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pwitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pwitter/Pods-Pwitter.release.xcconfig"; sourceTree = "<group>"; };
+		40A7ECE1C615730E827CDFF3 /* Pods_Pwitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pwitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		433700561E5685D9006F8437 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
+		433700591E58CCA1006F8437 /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
+		435578EB1E51729F009B3B42 /* Pwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		435578EE1E51729F009B3B42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		435578F31E51729F009B3B42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		435578F51E51729F009B3B42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		435578F81E51729F009B3B42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		435578FA1E51729F009B3B42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		435578FF1E51729F009B3B42 /* PwitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PwitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		435579031E51729F009B3B42 /* PwitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PwitterTests.swift; sourceTree = "<group>"; };
+		435579051E51729F009B3B42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4355790A1E51729F009B3B42 /* PwitterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PwitterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4355790E1E51729F009B3B42 /* PwitterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PwitterUITests.swift; sourceTree = "<group>"; };
+		435579101E51729F009B3B42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4355791D1E5174EE009B3B42 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		435579211E539EB3009B3B42 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		435579231E539EBC009B3B42 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		435579251E53AA9E009B3B42 /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
+		435579271E53F17B009B3B42 /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
+		4C1BB98CF4870E83859CCE3F /* Pods-Pwitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pwitter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pwitter/Pods-Pwitter.debug.xcconfig"; sourceTree = "<group>"; };
+		6342D88BA6C8F933A3FECA82 /* Pods_PwitterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PwitterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		742DD52BFE7CD9BDAE2B6A55 /* Pods-PwitterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PwitterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PwitterTests/Pods-PwitterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		874B599CB22391F78F84E6F8 /* Pods-PwitterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PwitterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PwitterTests/Pods-PwitterTests.release.xcconfig"; sourceTree = "<group>"; };
+		B5C8B19264EEC91D25277B19 /* Pods-PwitterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PwitterUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PwitterUITests/Pods-PwitterUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		435578E81E51729F009B3B42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2BF0B9D7F56F4883CDCE48D /* Pods_Pwitter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		435578FC1E51729F009B3B42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E98FDC426B138A8BAF90B96 /* Pods_PwitterTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		435579071E51729F009B3B42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73BE81917755A1D3FD987EBE /* Pods_PwitterUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17D76A4D4580639FEEC04319 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40A7ECE1C615730E827CDFF3 /* Pods_Pwitter.framework */,
+				6342D88BA6C8F933A3FECA82 /* Pods_PwitterTests.framework */,
+				2CC87ACA86B0F6C8097F5511 /* Pods_PwitterUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		38EBBBFA1BFB52F2D9C929E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C1BB98CF4870E83859CCE3F /* Pods-Pwitter.debug.xcconfig */,
+				3B6D7C618A2067DB92675B40 /* Pods-Pwitter.release.xcconfig */,
+				742DD52BFE7CD9BDAE2B6A55 /* Pods-PwitterTests.debug.xcconfig */,
+				874B599CB22391F78F84E6F8 /* Pods-PwitterTests.release.xcconfig */,
+				B5C8B19264EEC91D25277B19 /* Pods-PwitterUITests.debug.xcconfig */,
+				396E4B515091B89496534E14 /* Pods-PwitterUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		433700581E568ED6006F8437 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				433700561E5685D9006F8437 /* TweetTableViewCell.swift */,
+				433700591E58CCA1006F8437 /* InfiniteScrollActivityView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		435578E21E51729F009B3B42 = {
+			isa = PBXGroup;
+			children = (
+				435578ED1E51729F009B3B42 /* Pwitter */,
+				435579021E51729F009B3B42 /* PwitterTests */,
+				4355790D1E51729F009B3B42 /* PwitterUITests */,
+				435578EC1E51729F009B3B42 /* Products */,
+				38EBBBFA1BFB52F2D9C929E2 /* Pods */,
+				17D76A4D4580639FEEC04319 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		435578EC1E51729F009B3B42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				435578EB1E51729F009B3B42 /* Pwitter.app */,
+				435578FF1E51729F009B3B42 /* PwitterTests.xctest */,
+				4355790A1E51729F009B3B42 /* PwitterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		435578ED1E51729F009B3B42 /* Pwitter */ = {
+			isa = PBXGroup;
+			children = (
+				435579201E539E6A009B3B42 /* API */,
+				4355791F1E539DC6009B3B42 /* Models */,
+				433700581E568ED6006F8437 /* Views */,
+				4355791C1E5174D2009B3B42 /* ViewControllers */,
+				435578EE1E51729F009B3B42 /* AppDelegate.swift */,
+				435578F21E51729F009B3B42 /* Main.storyboard */,
+				435578F51E51729F009B3B42 /* Assets.xcassets */,
+				435578F71E51729F009B3B42 /* LaunchScreen.storyboard */,
+				435578FA1E51729F009B3B42 /* Info.plist */,
+			);
+			path = Pwitter;
+			sourceTree = "<group>";
+		};
+		435579021E51729F009B3B42 /* PwitterTests */ = {
+			isa = PBXGroup;
+			children = (
+				435579031E51729F009B3B42 /* PwitterTests.swift */,
+				435579051E51729F009B3B42 /* Info.plist */,
+			);
+			path = PwitterTests;
+			sourceTree = "<group>";
+		};
+		4355790D1E51729F009B3B42 /* PwitterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4355790E1E51729F009B3B42 /* PwitterUITests.swift */,
+				435579101E51729F009B3B42 /* Info.plist */,
+			);
+			path = PwitterUITests;
+			sourceTree = "<group>";
+		};
+		4355791C1E5174D2009B3B42 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4355791D1E5174EE009B3B42 /* LoginViewController.swift */,
+				435579271E53F17B009B3B42 /* TweetsViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4355791F1E539DC6009B3B42 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				435579211E539EB3009B3B42 /* User.swift */,
+				435579231E539EBC009B3B42 /* Tweet.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		435579201E539E6A009B3B42 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				435579251E53AA9E009B3B42 /* TwitterClient.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		435578EA1E51729F009B3B42 /* Pwitter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 435579131E51729F009B3B42 /* Build configuration list for PBXNativeTarget "Pwitter" */;
+			buildPhases = (
+				212F2B43FB183BA4BD397D5A /* [CP] Check Pods Manifest.lock */,
+				435578E71E51729F009B3B42 /* Sources */,
+				435578E81E51729F009B3B42 /* Frameworks */,
+				435578E91E51729F009B3B42 /* Resources */,
+				D92CD786727548FBC529E640 /* [CP] Embed Pods Frameworks */,
+				3A3FA7AC3CDDCF4EB2761EE5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pwitter;
+			productName = Pwitter;
+			productReference = 435578EB1E51729F009B3B42 /* Pwitter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		435578FE1E51729F009B3B42 /* PwitterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 435579161E51729F009B3B42 /* Build configuration list for PBXNativeTarget "PwitterTests" */;
+			buildPhases = (
+				49B1CB3AE27A9E16DCC80875 /* [CP] Check Pods Manifest.lock */,
+				435578FB1E51729F009B3B42 /* Sources */,
+				435578FC1E51729F009B3B42 /* Frameworks */,
+				435578FD1E51729F009B3B42 /* Resources */,
+				5EB03A40311A9DE21A5CD6BB /* [CP] Embed Pods Frameworks */,
+				669D362C239E14B7ACF940D1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				435579011E51729F009B3B42 /* PBXTargetDependency */,
+			);
+			name = PwitterTests;
+			productName = PwitterTests;
+			productReference = 435578FF1E51729F009B3B42 /* PwitterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		435579091E51729F009B3B42 /* PwitterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 435579191E51729F009B3B42 /* Build configuration list for PBXNativeTarget "PwitterUITests" */;
+			buildPhases = (
+				38F5BEE23C997B04B6001E6A /* [CP] Check Pods Manifest.lock */,
+				435579061E51729F009B3B42 /* Sources */,
+				435579071E51729F009B3B42 /* Frameworks */,
+				435579081E51729F009B3B42 /* Resources */,
+				19128DC1E9A2C627F6871475 /* [CP] Embed Pods Frameworks */,
+				5FA802D3AD46C40CC6862332 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4355790C1E51729F009B3B42 /* PBXTargetDependency */,
+			);
+			name = PwitterUITests;
+			productName = PwitterUITests;
+			productReference = 4355790A1E51729F009B3B42 /* PwitterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		435578E31E51729F009B3B42 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = CodePath;
+				TargetAttributes = {
+					435578EA1E51729F009B3B42 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					435578FE1E51729F009B3B42 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 435578EA1E51729F009B3B42;
+					};
+					435579091E51729F009B3B42 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 435578EA1E51729F009B3B42;
+					};
+				};
+			};
+			buildConfigurationList = 435578E61E51729F009B3B42 /* Build configuration list for PBXProject "Pwitter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 435578E21E51729F009B3B42;
+			productRefGroup = 435578EC1E51729F009B3B42 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				435578EA1E51729F009B3B42 /* Pwitter */,
+				435578FE1E51729F009B3B42 /* PwitterTests */,
+				435579091E51729F009B3B42 /* PwitterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		435578E91E51729F009B3B42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				435578F91E51729F009B3B42 /* LaunchScreen.storyboard in Resources */,
+				435578F61E51729F009B3B42 /* Assets.xcassets in Resources */,
+				435578F41E51729F009B3B42 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		435578FD1E51729F009B3B42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		435579081E51729F009B3B42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19128DC1E9A2C627F6871475 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PwitterUITests/Pods-PwitterUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		212F2B43FB183BA4BD397D5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		38F5BEE23C997B04B6001E6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3A3FA7AC3CDDCF4EB2761EE5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pwitter/Pods-Pwitter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49B1CB3AE27A9E16DCC80875 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5EB03A40311A9DE21A5CD6BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PwitterTests/Pods-PwitterTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FA802D3AD46C40CC6862332 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PwitterUITests/Pods-PwitterUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		669D362C239E14B7ACF940D1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PwitterTests/Pods-PwitterTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D92CD786727548FBC529E640 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pwitter/Pods-Pwitter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		435578E71E51729F009B3B42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4337005A1E58CCA1006F8437 /* InfiniteScrollActivityView.swift in Sources */,
+				435579261E53AA9E009B3B42 /* TwitterClient.swift in Sources */,
+				4355791E1E5174EE009B3B42 /* LoginViewController.swift in Sources */,
+				435579281E53F17B009B3B42 /* TweetsViewController.swift in Sources */,
+				435578EF1E51729F009B3B42 /* AppDelegate.swift in Sources */,
+				435579221E539EB3009B3B42 /* User.swift in Sources */,
+				435579241E539EBC009B3B42 /* Tweet.swift in Sources */,
+				433700571E5685D9006F8437 /* TweetTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		435578FB1E51729F009B3B42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				435579041E51729F009B3B42 /* PwitterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		435579061E51729F009B3B42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4355790F1E51729F009B3B42 /* PwitterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		435579011E51729F009B3B42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 435578EA1E51729F009B3B42 /* Pwitter */;
+			targetProxy = 435579001E51729F009B3B42 /* PBXContainerItemProxy */;
+		};
+		4355790C1E51729F009B3B42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 435578EA1E51729F009B3B42 /* Pwitter */;
+			targetProxy = 4355790B1E51729F009B3B42 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		435578F21E51729F009B3B42 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				435578F31E51729F009B3B42 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		435578F71E51729F009B3B42 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				435578F81E51729F009B3B42 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		435579111E51729F009B3B42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		435579121E51729F009B3B42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		435579141E51729F009B3B42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C1BB98CF4870E83859CCE3F /* Pods-Pwitter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Pwitter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CodePath.Pwitter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		435579151E51729F009B3B42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B6D7C618A2067DB92675B40 /* Pods-Pwitter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Pwitter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CodePath.Pwitter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		435579171E51729F009B3B42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 742DD52BFE7CD9BDAE2B6A55 /* Pods-PwitterTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PwitterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CodePath.PwitterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pwitter.app/Pwitter";
+			};
+			name = Debug;
+		};
+		435579181E51729F009B3B42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 874B599CB22391F78F84E6F8 /* Pods-PwitterTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PwitterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CodePath.PwitterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pwitter.app/Pwitter";
+			};
+			name = Release;
+		};
+		4355791A1E51729F009B3B42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5C8B19264EEC91D25277B19 /* Pods-PwitterUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = PwitterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CodePath.PwitterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Pwitter;
+			};
+			name = Debug;
+		};
+		4355791B1E51729F009B3B42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 396E4B515091B89496534E14 /* Pods-PwitterUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = PwitterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = CodePath.PwitterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Pwitter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		435578E61E51729F009B3B42 /* Build configuration list for PBXProject "Pwitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				435579111E51729F009B3B42 /* Debug */,
+				435579121E51729F009B3B42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		435579131E51729F009B3B42 /* Build configuration list for PBXNativeTarget "Pwitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				435579141E51729F009B3B42 /* Debug */,
+				435579151E51729F009B3B42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		435579161E51729F009B3B42 /* Build configuration list for PBXNativeTarget "PwitterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				435579171E51729F009B3B42 /* Debug */,
+				435579181E51729F009B3B42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		435579191E51729F009B3B42 /* Build configuration list for PBXNativeTarget "PwitterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4355791A1E51729F009B3B42 /* Debug */,
+				4355791B1E51729F009B3B42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 435578E31E51729F009B3B42 /* Project object */;
+}

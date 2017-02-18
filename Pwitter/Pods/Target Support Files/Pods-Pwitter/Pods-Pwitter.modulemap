@@ -1,0 +1,6 @@
+framework module Pods_Pwitter {
+  umbrella header "Pods-Pwitter-umbrella.h"
+
+  export *
+  module * { export * }
+}
