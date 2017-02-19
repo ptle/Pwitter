@@ -17,8 +17,14 @@ class TweetTableViewCell: UITableViewCell {
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var favoritecountLabel: UILabel!
     @IBOutlet weak var retweetcountLabel: UILabel!
+    @IBOutlet weak var retweet: UIButton!
+    @IBOutlet weak var favorite: UIButton!
+    @IBOutlet weak var retweeted: UIButton!
+    @IBOutlet weak var favorited: UIButton!
     
     var tweetID: String = ""
+    var favorites: Int?
+    var retweets: Int?
     
     var tweet: Tweet! {
         didSet{
@@ -32,10 +38,39 @@ class TweetTableViewCell: UITableViewCell {
             contentLabel.text = tweet.text! as String?
             retweetcountLabel.text = "\(tweet.retweetCount)"
             favoritecountLabel.text = "\(tweet.favoritesCount)"
+            favorites = tweet.favoritesCount
+            retweets = tweet.retweetCount
+            
             tweetID = tweet.id as! String
             
             retweetcountLabel.text! == "0" ? (retweetcountLabel.isHidden = true) : (retweetcountLabel.isHidden = false)
             favoritecountLabel.text! == "0" ? (favoritecountLabel.isHidden = true) : (favoritecountLabel.isHidden = false)
+            
+            if(tweet.favorited!)
+            {
+                favorite.isHidden = true
+                favorited.isHidden = false
+                favoritecountLabel.textColor = UIColor(red: 229/255, green: 34/255, blue: 74/255, alpha: 1)
+            }
+            else
+            {
+                favorite.isHidden = false
+                favorited.isHidden = true
+                self.favoritecountLabel.textColor = UIColor(red: 170/255, green: 184/255, blue: 194/255, alpha: 1)
+            }
+            if(tweet.retweeted!)
+            {
+                retweet.isHidden = true
+                retweeted.isHidden = false
+                self.retweetcountLabel.textColor = UIColor(red: 1/255, green: 217/255, blue: 137/255, alpha: 1)
+            }
+            else
+            {
+                retweet.isHidden = false
+                retweeted.isHidden = true
+                self.retweetcountLabel.textColor = UIColor(red: 170/255, green: 184/255, blue: 194/255, alpha: 1)
+
+            }
         }
     }
     
@@ -85,33 +120,73 @@ class TweetTableViewCell: UITableViewCell {
     @IBAction func retweetButton(_ sender: Any) {
         TwitterClient.sharedInstance?.retweet(id: Int(tweetID)!, params: nil, completion: {(error) -> () in
             //self.retweetButton.setImage(UIImage(named: "retweet-icon"), forState: UIControlState.Selected)
+            self.retweets = self.retweets! + 1
+            self.retweetcountLabel.text = "\(self.retweets!)"
             
             if self.retweetcountLabel.text! > "0" {
-                //show label if greater than 0
-                self.retweetcountLabel.text = String(self.tweet.retweetCount + 1)
-            } else {
-                //show and increment count when retweeted
                 self.retweetcountLabel.isHidden = false
-                self.retweetcountLabel.text = String(self.tweet.retweetCount + 1)
             }
+            
+            self.retweet.isHidden = true
+            self.retweeted.isHidden = false
+            self.retweetcountLabel.textColor = UIColor(red: 1/255, green: 217/255, blue: 137/255, alpha: 1)
+            
         })
     }
     
+    
+    @IBAction func unretweet(_ sender: Any) {
+        TwitterClient.sharedInstance?.unretweet(tweet: tweet, params: nil, completion: { (error) -> () in
+            
+            self.retweets = self.retweets! - 1
+            self.retweetcountLabel.text = "\(self.retweets!)"
+            
+            if self.retweetcountLabel.text! < "0" {
+                self.retweetcountLabel.isHidden = true
+            }
+            
+            self.retweet.isHidden = false
+            self.retweeted.isHidden = true
+            self.retweetcountLabel.textColor = UIColor(red: 170/255, green: 184/255, blue: 194/255, alpha: 1)
+        })
+    }
     
     
     @IBAction func favorite(_ sender: Any) {
-        TwitterClient.sharedInstance?.likeTweet(id: Int(tweetID)!, params: nil, completion: {(error) -> () in
+        TwitterClient.sharedInstance?.like(id: Int(tweetID)!, params: nil, completion: {(error) -> () in
             
+            self.favorites = self.favorites! + 1
+            self.favoritecountLabel.text = "\(self.favorites!)"
             
             if self.favoritecountLabel.text! > "0" {
-                self.favoritecountLabel.text = String(self.tweet.favoritesCount + 1)
-            } else {
                 self.favoritecountLabel.isHidden = false
-                self.favoritecountLabel.text = String(self.tweet.favoritesCount + 1)
             }
+            
+            
+            self.favorite.isHidden = true
+            self.favorited.isHidden = false
+            self.favoritecountLabel.textColor = UIColor(red: 229/255, green: 34/255, blue: 74/255, alpha: 1)
+            
         })
     }
     
+    @IBAction func unfavorite(_ sender: Any) {
+        TwitterClient.sharedInstance?.unlike(id: Int(tweetID)!, params: nil, completion: {(error) -> () in
+            
+            self.favorites = self.favorites! - 1
+            self.favoritecountLabel.text = "\(self.favorites!)"
+            
+            if self.favoritecountLabel.text! < "0" {
+                self.favoritecountLabel.isHidden = true
+            }
+            
+           
+            self.favorite.isHidden = false
+            self.favorited.isHidden = true
+            
+            self.favoritecountLabel.textColor = UIColor(red: 170/255, green: 184/255, blue: 194/255, alpha: 1)
+        })
+    }
     
 
 }

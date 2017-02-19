@@ -105,7 +105,41 @@ class TwitterClient: BDBOAuth1SessionManager {
         )
     }
     
-    func likeTweet(id: Int, params: NSDictionary?, completion: @escaping (_ error: NSError?) -> () ){
+    func unretweet(tweet:Tweet, params: NSDictionary?, completion: @escaping (_ error: NSError?) -> ()){
+        var original_tweet_id:NSString?
+        if let retweetedId = tweet.retweetId
+        {
+            original_tweet_id = retweetedId
+        }
+        else
+        {
+            original_tweet_id = tweet.id
+        }
+
+        //print("1.1/statuses/show.json?id=\(original_tweet_id!)&include_my_retweet=1")
+        get("1.1/statuses/show.json?id=\(original_tweet_id!)&include_my_retweet=1", parameters: nil, progress: nil, success: { (task: URLSessionDataTask,response: Any?) in
+            //print(response)
+            let dictionary = response as! NSDictionary
+            let full_tweet = dictionary["current_user_retweet"] as! NSDictionary
+            let retweet_id = full_tweet["id_str"] as! NSString
+            completion(nil)
+            
+            
+            self.post("1.1/statuses/destroy/\(retweet_id).json", parameters: nil, progress: nil, success: { (task: URLSessionDataTask,response: Any?) in
+                print("Unretweeted tweet")
+                completion(nil)
+            }, failure: { (task: URLSessionDataTask?,error: Error) in
+                print("Couldn't unretweet")
+                completion(error as NSError?)
+            })
+            
+        }, failure: { (task: URLSessionDataTask?,error: Error) in
+            print("Couldn't like unretweet")
+            completion(error as NSError?)
+        })
+    }
+    
+    func like(id: Int, params: NSDictionary?, completion: @escaping (_ error: NSError?) -> () ){
         post("1.1/favorites/create.json?id=\(id)", parameters: params, success: { (task: URLSessionDataTask,response: Any?) in
             print("Liked tweet with id: \(id)")
             completion(nil)
@@ -114,4 +148,14 @@ class TwitterClient: BDBOAuth1SessionManager {
             completion(error as NSError?)
         }
     )}
+    
+    func unlike(id: Int, params: NSDictionary?, completion: @escaping (_ error: NSError?) -> () ){
+        post("1.1/favorites/destroy.json?id=\(id)", parameters: params, success: { (task: URLSessionDataTask,response: Any?) in
+            print("unLiked tweet with id: \(id)")
+            completion(nil)
+        }, failure: { (task: URLSessionDataTask?,error: Error) in
+            print("Couldn't unlike tweet")
+            completion(error as NSError?)
+        }
+        )}
 }

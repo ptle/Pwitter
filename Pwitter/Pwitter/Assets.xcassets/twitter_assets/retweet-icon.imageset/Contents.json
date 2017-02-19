@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "retweet-icon.png",
+      "filename" : "retweet-icon-nobg.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "retweet-icon@2x.png",
+      "filename" : "retweet-icon@2x-nobg.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "retweet-icon@3x.png",
+      "filename" : "retweet-icon@3x-nobg.png",
       "scale" : "3x"
     }
   ],
