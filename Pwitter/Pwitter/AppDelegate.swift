@@ -34,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
         
+        UITabBar.appearance().tintColor = UIColor.black
+        
         return true
     }
 

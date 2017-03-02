@@ -146,10 +146,49 @@ class TweetsViewController: UIViewController,
         
         cell.tweet = tweets[indexPath.row]
         cell.selectionStyle = .none
-        
+        cell.accessoryType = .none
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "UserProfile")
+        {
+            if let button = sender as? UIButton {
+                if let superview = button.superview {
+                    if let cell = superview.superview as? TweetTableViewCell {
+                        let indexPath = tableView.indexPath(for: cell)
+                        let tweet = tweets[indexPath!.item]
+                        //print(tweet)
+                        let destinationViewController = segue.destination as! UserProfileViewController
+                        destinationViewController.user = tweet.user
+                    }
+                }
+            }
+        }
+        else if(segue.identifier == "TweetDetail")
+        {
+            let cell = sender as? TweetTableViewCell
+            let indexPath = tableView.indexPath(for: cell!)
+            let tweet = tweets[indexPath!.item]
+            let destinationViewController = segue.destination as! DetailedTweetViewController
+            destinationViewController.tweet = tweet
+        }
+        else if(segue.identifier == "TweetReply")
+        {
+            if let button = sender as? UIButton {
+                if let superview = button.superview {
+                    if let cell = superview.superview as? TweetTableViewCell {
+                        let indexPath = tableView.indexPath(for: cell)
+                        let tweet = tweets[indexPath!.item]
+                        //print(tweet)
+                        let navdestinationViewController = segue.destination as! UINavigationController
+                        let destinationViewController = navdestinationViewController.viewControllers.first as! ComposeTweetViewController
+                        destinationViewController.tweet = tweet
+                    }
+                }
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 

@@ -35,12 +35,16 @@ class TweetTableViewCell: UITableViewCell {
                 profileImage.setImageWith(imageURL as URL)
             }
             timestampLabel.text = calculateTimeStamp(timeTweetPostedAgo: tweet.timestamp!.timeIntervalSinceNow)
+            
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = NumberFormatter.Style.decimal
+            
             contentLabel.text = tweet.text! as String?
-            retweetcountLabel.text = "\(tweet.retweetCount)"
-            favoritecountLabel.text = "\(tweet.favoritesCount)"
+            retweetcountLabel.text = numberFormatter.string(from: NSNumber(value: tweet.retweetCount))
+            favoritecountLabel.text = numberFormatter.string(from: NSNumber(value: tweet.favoritesCount))
+            
             favorites = tweet.favoritesCount
             retweets = tweet.retweetCount
-            
             tweetID = tweet.id as! String
             
             retweetcountLabel.text! == "0" ? (retweetcountLabel.isHidden = true) : (retweetcountLabel.isHidden = false)
@@ -137,11 +141,12 @@ class TweetTableViewCell: UITableViewCell {
     
     @IBAction func unretweet(_ sender: Any) {
         TwitterClient.sharedInstance?.unretweet(tweet: tweet, params: nil, completion: { (error) -> () in
-            
+            //print(self.retweets)
             self.retweets = self.retweets! - 1
             self.retweetcountLabel.text = "\(self.retweets!)"
+            //print(self.retweets)
             
-            if self.retweetcountLabel.text! < "0" {
+            if self.retweetcountLabel.text! <= "0" {
                 self.retweetcountLabel.isHidden = true
             }
             
@@ -176,7 +181,7 @@ class TweetTableViewCell: UITableViewCell {
             self.favorites = self.favorites! - 1
             self.favoritecountLabel.text = "\(self.favorites!)"
             
-            if self.favoritecountLabel.text! < "0" {
+            if self.favoritecountLabel.text! <= "0" {
                 self.favoritecountLabel.isHidden = true
             }
             

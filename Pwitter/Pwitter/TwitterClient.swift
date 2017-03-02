@@ -36,10 +36,12 @@ class TwitterClient: BDBOAuth1SessionManager {
             
             success(user)
             
+            /*
             print("name: \(user.name)")
             print("screenname: \(user.screenname)")
             print("profile image: \(user.profileUrl)")
             print("description: \(user.tagline)")
+             */
         }, failure: { (task: URLSessionDataTask?, error: Error) in
             failure(error as NSError)
         })
@@ -122,8 +124,6 @@ class TwitterClient: BDBOAuth1SessionManager {
             let dictionary = response as! NSDictionary
             let full_tweet = dictionary["current_user_retweet"] as! NSDictionary
             let retweet_id = full_tweet["id_str"] as! NSString
-            completion(nil)
-            
             
             self.post("1.1/statuses/destroy/\(retweet_id).json", parameters: nil, progress: nil, success: { (task: URLSessionDataTask,response: Any?) in
                 print("Unretweeted tweet")
@@ -158,4 +158,44 @@ class TwitterClient: BDBOAuth1SessionManager {
             completion(error as NSError?)
         }
         )}
+    
+    //Used to make tweet
+    func tweet(status: String, success: @escaping () -> (), failure: @escaping (NSError) -> () ) {
+        post("1.1/statuses/update.json", parameters: ["status": status], progress: nil, success: {( task: URLSessionDataTask, response: Any?) in
+            
+            success()
+            
+        }, failure: { (task: URLSessionDataTask?, error: Error) in
+            failure(error as NSError)
+        })
+    }
+
+    
+    func reply(text: String, id: Int, success: @escaping () -> (), failure: @escaping (NSError) -> () ) {
+        post("1.1/statuses/update.json",parameters: [ "status": text, "in_reply_to_status_id": id], success: { (operation: URLSessionDataTask!, response: Any?) in
+            
+            //print("replied to tweet: \(text)")
+            success()
+        
+        }, failure: { (operation: URLSessionDataTask?, error: Error!) in
+            print("failed reply")
+            print(error)
+        })
+    }
+    
+    func userTimeline(myUser: String, success: @escaping ([Tweet]) -> (), failure: @escaping (NSError) ->() ) {
+        get("1.1/statuses/user_timeline.json", parameters: ["screen_name": myUser], progress: nil, success: {( task: URLSessionDataTask, response: Any?) -> Void in
+            let dictionaries = response as! [NSDictionary]
+            //tweets are an array of NSDict
+            
+            let tweets = Tweet.tweetsWithArray(dictionaries: dictionaries)
+            success(tweets)
+            
+            //for tweet in tweets {
+            //    print("\(tweet.text!)")
+            //}
+        }, failure: { (task: URLSessionDataTask?, error: Error) -> Void in
+            failure(error as NSError)
+        })
+    }
 }
